@@ -1,0 +1,12 @@
+language: cpp
+os: osx
+osx_image:
+  - xcode8.2
+  - xcode7.3
+  - xcode6.4
+install:
+  - brew update && brew upgrade
+  - brew install --only-dependencies file://${TRAVIS_BUILD_DIR}/qt.rb
+script:
+  - brew install -v --build-bottle file://${TRAVIS_BUILD_DIR}/qt.rb
+  - brew bottle qt
