@@ -2,7 +2,7 @@ language: cpp
 os: osx
 osx_image: xcode7.3
 install:
-  - brew update && brew upgrade
+  - brew update
   - brew install --only-dependencies file://${TRAVIS_BUILD_DIR}/qt.rb
 script:
   - brew install --build-bottle -v file://${TRAVIS_BUILD_DIR}/qt.rb
