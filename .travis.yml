@@ -8,5 +8,5 @@ install:
   - brew update && brew upgrade
   - brew install --only-dependencies file://${TRAVIS_BUILD_DIR}/qt.rb
 script:
-  - brew install -v --build-bottle file://${TRAVIS_BUILD_DIR}/qt.rb
+  - brew install --build-bottle -v file://${TRAVIS_BUILD_DIR}/qt.rb
   - brew bottle qt
