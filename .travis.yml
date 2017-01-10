@@ -3,7 +3,7 @@ os: osx
 osx_image: xcode7.3
 install:
   - brew update
-  - brew install --only-dependencies file://${TRAVIS_BUILD_DIR}/qt.rb
+  - brew install --only-dependencies --build-bottle file://${TRAVIS_BUILD_DIR}/qt.rb
 script:
-  - brew install --build-bottle -v file://${TRAVIS_BUILD_DIR}/qt.rb
+  - travis_wait 90 brew install --build-bottle file://${TRAVIS_BUILD_DIR}/qt.rb
   - brew bottle qt
