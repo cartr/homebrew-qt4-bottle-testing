@@ -52,6 +52,7 @@ class Qt < Formula
       -nomake demos
       -nomake examples
       -cocoa
+      -no-javascript-jit
     ]
 
     if ENV.compiler == :clang
