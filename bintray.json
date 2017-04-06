@@ -21,7 +21,7 @@
 
     "files":
         [
-        {"includePattern": "(.*\.tar\.gz)", "uploadPattern": "/$1"}
+        {"includePattern": "./(.*\.tar\.gz)", "uploadPattern": "/$1"}
         ],
     "publish": true
 }

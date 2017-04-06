@@ -21,8 +21,8 @@ install:
   - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ pull
   - brew install --only-dependencies --build-bottle cartr/qt4/qt@4
 script:
-  - travis_wait 90 brew install --build-bottle cartr/qt4/qt@4
-  - brew bottle cartr/qt4/qt@4
+  - travis_wait 90 brew install --build-bottle hello
+  - brew bottle hello
 deploy:
   provider: bintray
   file: bintray.json
