@@ -8,9 +8,9 @@ osx_image:
 install:
   - brew update
   - brew tap --full cartr/qt4
-  - brew install --only-dependencies --build-bottle cartr/qt4/qt@4
   - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ fetch
   - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ checkout split-core-webkit-tools
+  - brew install --only-dependencies --build-bottle cartr/qt4/qt@4
 script:
   - travis_wait 90 brew install --build-bottle cartr/qt4/qt@4
   - brew bottle cartr/qt4/qt@4
