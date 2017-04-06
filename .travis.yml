@@ -10,6 +10,7 @@ install:
   - brew tap --full cartr/qt4
   - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ fetch
   - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ checkout split-core-webkit-tools
+  - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ pull
   - brew install --only-dependencies --build-bottle cartr/qt4/qt@4
 script:
   - travis_wait 90 brew install --build-bottle cartr/qt4/qt@4
