@@ -1,7 +1,7 @@
 {
     "package": {
         "name": "bottles",
-        "repo": "autobottle-qt4-test",
+        "repo": "autobottle-qt4",
         "subject": "cartr",
         "desc": "Automatic push from Travis",
         "website_url": "https://github.com/cartr/homebrew-qt4-bottle-testing",
