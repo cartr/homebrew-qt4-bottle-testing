@@ -19,7 +19,7 @@ install:
   - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ checkout split-core-webkit-tools
   - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ pull
 script:
-  - bash ./build-bottles.sh
+  - travis_wait 90 bash ./build-bottles.sh
 deploy:
   provider: bintray
   file: bintray.json
