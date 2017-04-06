@@ -7,10 +7,13 @@ osx_image:
   - xcode8.3
 install:
   - brew update
-  - brew install --only-dependencies --build-bottle file://${TRAVIS_BUILD_DIR}/qt@4.rb
+  - brew tap --full cartr/qt4
+  - brew install --only-dependencies --build-bottle cartr/qt4/qt@4
+  - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ fetch
+  - git -C /usr/local/Homebrew/Library/Taps/cartr/homebrew-qt4/ checkout split-core-webkit-tools
 script:
-  - travis_wait 90 brew install --build-bottle file://${TRAVIS_BUILD_DIR}/qt@4.rb
-  - brew bottle qt@4
+  - travis_wait 90 brew install --build-bottle cartr/qt4/qt@4
+  - brew bottle cartr/qt4/qt@4
 deploy:
   provider: bintray
   file: bintray.json
